@@ -2,22 +2,47 @@
 
 int main()
 {
-    float PAG, SPA;
+    int I, N, NUM, SPA = 0, SIM = 0, CIM = 0;
 
-    SPA = 0;
+    printf("Ingrese el número de datos que se van a procesar:\t");
+    scanf("%d", &N);
 
-    printf("Ingrese el primer pago:\t");
-    scanf("%f", &PAG);
-
-    while (PAG != 0)
+    if (N > 0)
     {
-        SPA = SPA + PAG;
+        for (I = 1; I <= N; I++)
+        {
+            printf("\nIngrese el número %d: ", I);
+            scanf("%d", &NUM);
 
-        printf("Ingrese el siguiente pago:\t");
-        scanf("%f", &PAG);
+            if (NUM != 0)
+            {
+                if (NUM % 2 == 0)
+                {
+                    SPA = SPA + NUM;
+                }
+                else
+                {
+                    SIM = SIM + NUM;
+                    CIM++;
+                }
+            }
+        }
+
+        printf("\nLa suma de los números pares es: %d", SPA);
+
+        if (CIM != 0)
+        {
+            printf("\nEl promedio de números impares es: %5.2f", (float)SIM / CIM);
+        }
+        else
+        {
+            printf("\nNo hay números impares para calcular promedio");
+        }
     }
-
-    printf("\nEl total de pagos del mes es: %.2f", SPA);
+    else
+    {
+        printf("\nEl valor de N es incorrecto");
+    }
 
     return 0;
 }
