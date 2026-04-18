@@ -5,7 +5,7 @@ int main()
     int DIS, TIE;
     float BIL;
 
-    printf("Ingrese la distancia entre ciudades y el tiempo de estancia: ");
+    printf("Ingrese la distancia entre ciudades y el tiempo de estadia: ");
     scanf("%d %d", &DIS, &TIE);
 
     if ((DIS * 2 > 500) && (TIE > 10))
