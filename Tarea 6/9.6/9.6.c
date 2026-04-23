@@ -19,7 +19,7 @@ int main()
     }
     else
     {
-        printf("No se pueden abrir los archivos");
+        printf("No se puede abrir el archivo");
     }
 
     return 0;
